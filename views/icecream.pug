@@ -22,4 +22,16 @@ block content
                         "icecream_price":50
                     },
                 ]
+            each item,index in icecream 
+                table(style='width:100%')
+                    tr
+                        div(class="col-sm-2" onclick=`buy(${index})`) #{item.icecream_name}
+                        div(class="col-sm-2" onclick=`buy(${index})`) #{item.icecream_flavor}
+                        div(class="col-sm-2" onclick=`buy(${index})`) $#{item.icecream_price}
+            
+            script.                
+                  function buy(select)
+                  {
+                        alert(`You purchased item ${select+1}`)
+                  }
                
