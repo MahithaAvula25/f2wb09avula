@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1= title
+    div(class="container-fluid")
+        div(class="row")
+            -
+                let icecream= [
+                    {
+                        "icecream_name": "kulfi",
+                        "icecream_flavor":"badam",
+                        "icecream_price":30
+                    },
+                    {
+                        "icecream_name": "cone",
+                        "icecream_flavor":"chocolate",
+                        "icecream_price":60
+                    },
+                    {
+                        "icecream_name": "chocobar",
+                        "icecream_flavor":"vanilla",
+                        "icecream_price":50
+                    },
+                ]
+               
