@@ -25,12 +25,12 @@ block content
             each item,index in icecream 
                 table(style='width:100%')
                     tr
-                        div(class="col-sm-2" onclick=`buy(${index})`) #{item.icecream_name}
-                        div(class="col-sm-2" onclick=`buy(${index})`) #{item.icecream_flavor}
-                        div(class="col-sm-2" onclick=`buy(${index})`) $#{item.icecream_price}
+                        div(class="col-sm-2" onclick=`click(${index})`) #{item.icecream_name}
+                        div(class="col-sm-2" onclick=`click(${index})`) #{item.icecream_flavor}
+                        div(class="col-sm-2" onclick=`click(${index})`) $#{item.icecream_price}
             
             script.                
-                  function buy(select)
+                  function click (select)
                   {
                         alert(`You purchased item ${select+1}`)
                   }
