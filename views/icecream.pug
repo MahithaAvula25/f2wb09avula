@@ -1,37 +1,14 @@
 extends layout
 
 block content
-    h1= title
-    div(class="container-fluid")
-        div(class="row")
-            -
-                let icecream= [
-                    {
-                        "icecream_name": "kulfi",
-                        "icecream_flavor":"badam",
-                        "icecream_price":30
-                    },
-                    {
-                        "icecream_name": "cone",
-                        "icecream_flavor":"chocolate",
-                        "icecream_price":60
-                    },
-                    {
-                        "icecream_name": "chocobar",
-                        "icecream_flavor":"vanilla",
-                        "icecream_price":50
-                    },
-                ]
-            each item,index in icecream 
+  h1= title
+    - let icecreams   =[{name:"kulfi",flavor:"badam",price:10},{name:"chocobar",flavor:"vanilla",price:20},{name:"cone",flavor:"chocolate",price:50}]
+  div(class="container-fluid")
+  div(class="row")
+    
+    each icecream,index in icecreams
                 table(style='width:100%')
                     tr
-                        div(class="col-sm-2" onclick=`click(${index})`) #{item.icecream_name}
-                        div(class="col-sm-2" onclick=`click(${index})`) #{item.icecream_flavor}
-                        div(class="col-sm-2" onclick=`click(${index})`) $#{item.icecream_price}
-            
-            script.                
-                  function click (select)
-                  {
-                        alert(`You purchased item ${select+1}`)
-                  }
-               
+                        div(class="col-sm-2" ) #{icecream.name}
+                        div(class="col-sm-2" ) #{icecream.flavor}
+                        div(class="col-sm-2" ) $#{icecream.price}     
