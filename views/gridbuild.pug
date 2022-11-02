@@ -10,15 +10,18 @@ block content
         p you mentioned rows are not accurate 
     else if !Number.isInteger(col)
         p you mentioned columns are not appropriate 
-    else if rows < 0 || rows > 10
+    else if rows < 1 || rows > 10
         p you mentioned rows are  not in one to ten range 
-    else if col < 0 || col > 10
+    else if col < 1 || col > 10
         p you mentioned colums are  not in one to ten range
     else
        table           
             - for(let i=0; i<rows; i++) {
-               tr
-                 - for(let j=i; j<col+i; j++) {
-                     td= j 
+               tr#middle
+                 - for(let j=0; j<col; j++) {
+                     td= 1+i+j*rows
+                     td=" "
+                     td=" "
+                     td=" "
                  -}              
             - }
